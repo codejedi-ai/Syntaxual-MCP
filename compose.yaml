@@ -1,5 +1,5 @@
 services:
-  service-1: # Web Server and UI
+  service-1-ui: # Web Server and UI
     build:
       context: ./service-1
       dockerfile: Dockerfile
@@ -16,7 +16,7 @@ services:
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/"]
 
-  service-2: # MCP Service (MCP Client and Server)
+  service-2-mcp: # MCP Service (MCP Client and Server)
     build:
       context: ./service-2
       dockerfile: Dockerfile

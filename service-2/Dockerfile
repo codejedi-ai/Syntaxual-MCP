@@ -13,6 +13,10 @@ RUN python3 -m venv venv && \
     # deactivate the virtual environment
     deactivate
 
+# Copy all files including run.sh
 COPY . .
+
+# Make run.sh executable
+RUN chmod +x run.sh
 
 ENTRYPOINT ["./run.sh"]
